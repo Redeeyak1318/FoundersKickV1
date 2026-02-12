@@ -1,4 +1,4 @@
-import { API_BASE } from "@/lib/apiBase";
+import { API_BASE } from "@/lib/api";
 
 export { API_BASE };
 
