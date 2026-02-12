@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { API_BASE } from "@/lib/api";
+import { API_BASE } from "@/lib/apiBase";
 
 export async function POST(req) {
   try {
@@ -19,4 +19,3 @@ export async function POST(req) {
     );
   }
 }
-
