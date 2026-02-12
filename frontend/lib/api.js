@@ -1,4 +1,6 @@
-import { API_BASE } from "@/lib/api";
+import { API_BASE } from "@/lib/apiBase";
+
+export { API_BASE };
 
 export const getAuthToken = () => {
   if (typeof window === "undefined") return null;
@@ -40,4 +42,3 @@ export const apiFetch = async (path, options = {}) => {
 
   return data;
 };
-
