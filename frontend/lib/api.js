@@ -20,11 +20,17 @@ export const parseJwt = (token) => {
 
 export const apiFetch = async (path, options = {}) => {
   const token = getAuthToken();
+
   const headers = {
     "Content-Type": "application/json",
     ...(options.headers || {}),
     ...(token ? { Authorization: `Bearer ${token}` } : {})
   };
+
+  console.log("=== API DEBUG ===");
+  console.log("Token:", token);
+  console.log("Headers:", headers);
+  console.log("URL:", `${API_BASE}${path}`);
 
   const res = await fetch(`${API_BASE}${path}`, {
     ...options,
@@ -32,9 +38,9 @@ export const apiFetch = async (path, options = {}) => {
   });
 
   const data = await res.json().catch(() => ({}));
+
   if (!res.ok) {
-    const message = data.message || "Request failed";
-    const error = new Error(message);
+    const error = new Error(data.message || "Request failed");
     error.status = res.status;
     error.data = data;
     throw error;
