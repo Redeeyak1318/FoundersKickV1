@@ -1,4 +1,6 @@
-﻿import "../styles/globals.css"
+﻿console.log("API URL:", process.env.NEXT_PUBLIC_API_URL);
+
+import "../styles/globals.css"
 
 export const metadata = {
   title: "FoundersKick",
