@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation";
 
 export default function LoginPage() {
   const router = useRouter();
-  const API_BASE = process.env.NEXT_PUBLIC_API_URL;
+  const API_BASE = process.env.NEXT_PUBLIC_API_URL || "https://founderskickv1-production.up.railway.app";
   console.log("API_BASE:", API_BASE);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
