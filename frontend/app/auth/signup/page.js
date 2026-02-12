@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { API_BASE } from "@/lib/apiBase";
+import { API_BASE } from "@/lib/api";
 
 export default function SignupPage() {
   const router = useRouter();

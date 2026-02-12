@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { API_BASE } from "@/lib/apiBase";
+import { API_BASE } from "@/lib/api";
 
 export async function POST(req) {
   try {

@@ -1,4 +1,4 @@
-import { API_BASE } from "@/lib/apiBase";
+import { API_BASE } from "@/lib/api";
 
 export const getAuthToken = () => {
   if (typeof window === "undefined") return null;
