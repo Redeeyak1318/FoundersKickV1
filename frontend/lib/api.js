@@ -1,4 +1,4 @@
-﻿const API_URL = process.env.NEXT_PUBLIC_API_URL;
+import { API_BASE } from "@/lib/apiBase";
 
 export const getAuthToken = () => {
   if (typeof window === "undefined") return null;
@@ -24,7 +24,7 @@ export const apiFetch = async (path, options = {}) => {
     ...(token ? { Authorization: `Bearer ${token}` } : {})
   };
 
-  const res = await fetch(`${API_URL}${path}`, {
+  const res = await fetch(`${API_BASE}${path}`, {
     ...options,
     headers
   });
@@ -40,3 +40,4 @@ export const apiFetch = async (path, options = {}) => {
 
   return data;
 };
+

@@ -3,11 +3,10 @@
 import { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { API_BASE } from "@/lib/apiBase";
 
 export default function LoginPage() {
   const router = useRouter();
-  const API_BASE = "https://founderskickv1-production.up.railway.app";
-  console.log("API_BASE:", API_BASE);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");

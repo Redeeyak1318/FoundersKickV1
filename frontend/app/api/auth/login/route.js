@@ -1,11 +1,10 @@
-﻿import { NextResponse } from "next/server";
+import { NextResponse } from "next/server";
+import { API_BASE } from "@/lib/apiBase";
 
 export async function POST(req) {
-  const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000";
-
   try {
     const body = await req.json();
-    const res = await fetch(`${apiUrl}/api/auth/login`, {
+    const res = await fetch(`${API_BASE}/api/auth/login`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(body)
@@ -20,3 +19,5 @@ export async function POST(req) {
     );
   }
 }
+
+
