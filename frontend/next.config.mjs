@@ -1,11 +1,6 @@
-﻿import path from "path";
-
-/** @type {import('next').NextConfig} */
+﻿/** @type {import('next').NextConfig} */
 const nextConfig = {
-  webpack: (config) => {
-    config.resolve.alias["@"] = path.resolve("./");
-    return config;
-  },
+  turbopack: {}
 };
 
-export default nextConfig;
+module.exports = nextConfig;
